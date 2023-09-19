@@ -22,5 +22,4 @@ Analysis:
 - does the superhost affect the price?
 - how does the price affect to the cleaniness rating?
 - does room share affect the price?
-- plot the price average follow the area on the map using longitude and latitude
-- create a program to recommend the the area of the room following the demand of customer. 
+- plot the price average follow the area on the map using longitude and latitude. 

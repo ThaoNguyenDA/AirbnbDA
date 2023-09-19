@@ -1,4 +1,6 @@
 library(tidyverse)
+library(sf)
+library(mapview)
 kindofroom <- unique(amsterdam_weekdays$room_type)
 
 private_superhost <- mean(filter(amsterdam_weekdays, 
@@ -64,15 +66,22 @@ ggplot(data = amsterdam_weekdays, mapping = aes(x = cleanliness_rating, y = real
        y = "Price")
 
 cleanrate_entirehome <- unique(filter(amsterdam_weekdays, 
-                                      room_type == "Entire home/apt")$cleanliness_rating)
+                                      room_type == "Entire home/apt" & 
+                                        host_is_superhost == "True")$cleanliness_rating)
 cleanrate_private <- unique(filter(amsterdam_weekdays, 
                                   room_type == "Private room")$cleanliness_rating)
 cleanrate_shareroom <- unique(filter(amsterdam_weekdays, 
                                      room_type == "Shared room")$cleanliness_rating)
-cleanrating_for_entirehome = c()
-average_price
+
+average_price_entirehome_superhost = c()
+average_price_entirehome_nosuperhost = c()
 for (i in cleanrate_entirehome){
-  
+  number <- i
+  average_price_entirehome_nosuperhost <- append(average_price_entirehome_nosuperhost, 
+                                               mean(filter(amsterdam_weekdays, 
+                                                           cleanliness_rating == number)$realSum))
 }
 
-
+length(cleanrate_entirehome)
+average_price_entirehome_nosuperhost
+mapview(amsterdam_weekdays, xcol = "lng", ycol = "lat", crs = 4269, grid = FALSE)
