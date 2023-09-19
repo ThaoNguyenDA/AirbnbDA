@@ -10,16 +10,17 @@ biz                         :	Whether the listing is for business purposes or no
 cleanliness_rating          :	The cleanliness rating of the listing. (Numeric)
 guest_satisfaction_overall	: The overall guest satisfaction rating of the listing. (Numeric)
 bedrooms                    :	The number of bedrooms in the listing. (Numeric)
-dist                        :	The distance from the city centre. (Numeric)
+dist                        :	Th e distance from the city centre. (Numeric)
 metro_dist                  :	The distance from the nearest metro station. (Numeric)
 lng                         :	The longitude of the listing. (Numeric)
-lat                         :	The latitude of the listing. (Numeric)
+lat                         :	The latitude of the listing. (N
+umeric)
 
 Analysis:
 - what is the dfferent price among the kind of room?
 - Average price or the change of different kind of room by distance from metro and from city center
 - does the superhost affect the price?
-- how does the price affect to the cleaniness rating
+- how does the price affect to the cleaniness rating?
 - does room share affect the price?
 - plot the price average follow the area on the map using longitude and latitude
 - create a program to recommend the the area of the room following the demand of customer. 

@@ -6,7 +6,7 @@ import_csv <- function(name_dp, file_path){
   ##            file_path))
 }
 Nameoffile <- list.files(path = "Data/", pattern = ".csv", all.files = TRUE,
-                         full.names = TRUE)
+                         full.names = TRUE)     
 
 ##remove extension of file name to create variable names
 
